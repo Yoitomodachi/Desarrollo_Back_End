@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 
+    Autor: Roberto Rico Sandoval.
+    Fille: Página principal de la calculadora.
+    Date: 08 / 08/ 2023
+-->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./style.css" />
+    <title>Entrada de datos en la calculadora</title>
+    
+</head>
+
+<body>
+
+    <h1 class="centro">-- CALCULADORA --</h1>
+
+    <form method="POST" action="operaciones.php">
+
+    Primer número:<input type="number" name="num1" value="primernumero" /><br/><br/>
+
+    Segundo número:<input type="number" name="num2" value="segundonumero" /><br/><br/>
+
+    <p>Seleccióna la operación que deseas realizar:<br>
+    </p>
+
+    Selección:<input type="number" name="select" value="selección" />
+
+    <br/><button id="boton_principal" name="suma" type="submit" value="suma">Operar</button>
+
+    </form>
+
+    <img src="/Examen_de_entrada_de_datos/imagenes/final.png" alt = "Calculadora cientifica." 
+    height= "40px" width="40px" >
+
+</body>
+
+</html>
+
