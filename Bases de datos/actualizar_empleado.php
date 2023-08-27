@@ -2,22 +2,22 @@
 
 /*** 
      * Autor: Roberto Rico Sandoval.
-     * Date: 22/ 08/ 2023
-     * Fille: Datos del nuevo empleado en la BD desde PHP.
+     * Date: 28/ 08/ 2023
+     * Fille: Actualizar datos del empleado en la base de datos.
 ***/
 
     // Adquirir los métodos de este archivo (Paquetes / Módulos).
     include("prueba_db.php");
 
     // Verificar quue no haya campos vacios.
-    if(!empty($_POST['empleado_nombre']) && !empty($_POST['empleado_edad'])){
+    if(!empty($_POST['empleado_nombre']) && !empty($_POST['empleado_edad']) && !empty($_POST['empleado_id'])){
         
         // Conexión a la base de datos.
         $conexionbd = conectar_bd();
 
         // Consulta, para insertar datos en el campo nombre y el campo edad.
-        $querry = "INSERT INTO empleado (nombre, edad) VALUES
-            ('{$_POST['empleado_nombre']}', '{$_POST['empleado_edad']}')";
+        $querry = "UPDATE empleado SET nombre='".$_POST['empleado_nombre']."',edad='".$_POST['empleado_edad']."'
+        WHERE id=".$_POST['empleado_id'];
 
         // Comando para realizar una consulta sobre una conexión SQL.
         $exito = mysqli_query($conexionbd, $querry);

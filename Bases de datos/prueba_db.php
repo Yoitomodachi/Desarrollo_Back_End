@@ -30,7 +30,7 @@ function conectar_bd(){
 
     }else{
 
-        echo "Conexion exitosa";
+        //echo "Conexion exitosa";
     }
 
     // Retornar el valor de los datos de la conexión a la base de datos.
